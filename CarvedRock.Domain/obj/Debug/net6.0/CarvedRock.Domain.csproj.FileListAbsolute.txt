@@ -1,0 +1,11 @@
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\bin\Debug\net6.0\CarvedRock.Domain.deps.json
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\bin\Debug\net6.0\CarvedRock.Domain.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\bin\Debug\net6.0\CarvedRock.Domain.pdb
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.AssemblyInfoInputs.cache
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.AssemblyInfo.cs
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.csproj.CoreCompileInputs.cache
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\refint\CarvedRock.Domain.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.pdb
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\ref\CarvedRock.Domain.dll
