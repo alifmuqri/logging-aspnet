@@ -9,3 +9,5 @@ D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\refint\CarvedRock.Domain.dll
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.pdb
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\ref\CarvedRock.Domain.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.csproj.AssemblyReference.cache
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.sourcelink.json

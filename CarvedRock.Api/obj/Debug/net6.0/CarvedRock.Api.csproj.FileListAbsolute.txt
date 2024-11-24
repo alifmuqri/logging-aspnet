@@ -32,3 +32,7 @@ D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\obj\Debug\net6.0\refint\Carved
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\obj\Debug\net6.0\CarvedRock.Api.pdb
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\obj\Debug\net6.0\CarvedRock.Api.genruntimeconfig.cache
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\obj\Debug\net6.0\ref\CarvedRock.Api.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\bin\Debug\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\bin\Debug\net6.0\System.Diagnostics.DiagnosticSource.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\obj\Debug\net6.0\CarvedRock.Api.sourcelink.json
