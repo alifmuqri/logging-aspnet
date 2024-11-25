@@ -11,3 +11,6 @@ D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\ref\CarvedRock.Domain.dll
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.csproj.AssemblyReference.cache
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRock.Domain.sourcelink.json
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\bin\Debug\net6.0\CarvedRock.Data.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\bin\Debug\net6.0\CarvedRock.Data.pdb
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Domain\obj\Debug\net6.0\CarvedRo.4965B4D8.Up2Date
