@@ -1,8 +1,14 @@
 using CarvedRock.Domain;
 using CarvedRock.Data;
 using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
+
+var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+var tracePath = Path.Join(path, $"Log_CarvedRock_{DateTime.Now.ToString("yyyyMMdd_HHmm")}.txt");
+Trace.Listeners.Add(new TextWriterTraceListener(System.IO.File.CreateText(tracePath)));
+Trace.AutoFlush = true;
 
 // Add services to the container.
 builder.Services.AddControllers();
