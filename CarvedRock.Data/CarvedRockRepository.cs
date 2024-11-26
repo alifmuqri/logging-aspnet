@@ -31,7 +31,7 @@ namespace CarvedRock.Data
             }
             if (category == "equip")
             {
-                throw new SqliteException("Database error occured!!", 551);
+                throw new SqliteException("Simulated fatal database error occured!!", 551);
             }
 
             try
