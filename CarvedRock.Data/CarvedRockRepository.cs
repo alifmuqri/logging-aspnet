@@ -23,7 +23,27 @@ namespace CarvedRock.Data
         public async Task<List<Product>> GetProductsAsync(string category)
         {            
             _logger.LogInformation("Getting products in repository for {category}", category);
-            return await _ctx.Products.Where(p => p.Category == category || category == "all").ToListAsync();
+            if(category == "clothing")
+            {
+                var ex = new ApplicationException("Database error occured!!");
+                ex.Data.Add("category", category);
+                throw ex;
+            }
+            if (category == "equip")
+            {
+                throw new SqliteException("Database error occured!!", 551);
+            }
+
+            try
+            {
+                return await _ctx.Products.Where(p => p.Category == category || category == "all").ToListAsync();
+            }
+            catch(Exception ex)
+            {
+                var newEx = new ApplicationException("Something bad happened in database", ex);
+                newEx.Data.Add("category", category);
+                throw newEx;
+            }
         }
 
         public async Task<Product?> GetProductByIdAsync(int id)
