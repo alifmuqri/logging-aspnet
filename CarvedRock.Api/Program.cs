@@ -2,8 +2,17 @@ using CarvedRock.Domain;
 using CarvedRock.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
+using Hellang.Middleware.ProblemDetails;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddProblemDetails(opts => {
+    opts.IncludeExceptionDetails = (ctx, ex) => false;
+    opts.OnBeforeWriteDetails = (ctx, details) => {
+        if (details.Status == 500){
+            details.Detail = "An unexpected error occurred. Use the trace id when contacting us";
+        }
+    };
+});
 
 var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 var tracePath = Path.Join(path, $"Log_CarvedRock_{DateTime.Now.ToString("yyyyMMdd_HHmm")}.txt");
@@ -24,6 +33,7 @@ builder.Services.AddDbContext<LocalContext>();
 builder.Services.AddScoped<ICarvedRockRepository, CarvedRockRepository>();
 
 var app = builder.Build();
+app.UseProblemDetails();
 
 using (var scope = app.Services.CreateScope())
 {

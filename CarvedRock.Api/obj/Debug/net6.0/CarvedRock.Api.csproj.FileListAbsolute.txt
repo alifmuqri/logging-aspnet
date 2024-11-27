@@ -69,3 +69,4 @@ D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\bin\Debug\net6.0\Microsoft.Ext
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\bin\Debug\net6.0\Microsoft.Extensions.Options.dll
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\bin\Debug\net6.0\Microsoft.Extensions.Primitives.dll
 D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\bin\Debug\net6.0\System.Collections.Immutable.dll
+D:\Codes\logging-monitoring-aspnet\CarvedRock.Api\bin\Debug\net6.0\Hellang.Middleware.ProblemDetails.dll
