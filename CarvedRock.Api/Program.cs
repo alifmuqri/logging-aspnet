@@ -2,17 +2,9 @@ using CarvedRock.Domain;
 using CarvedRock.Data;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
-using Hellang.Middleware.ProblemDetails;
+using Microsoft.AspNetCore.Diagnostics;
 
 var builder = WebApplication.CreateBuilder(args);
-builder.Services.AddProblemDetails(opts => {
-    opts.IncludeExceptionDetails = (ctx, ex) => false;
-    opts.OnBeforeWriteDetails = (ctx, details) => {
-        if (details.Status == 500){
-            details.Detail = "An unexpected error occurred. Use the trace id when contacting us";
-        }
-    };
-});
 
 var path = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
 var tracePath = Path.Join(path, $"Log_CarvedRock_{DateTime.Now.ToString("yyyyMMdd_HHmm")}.txt");
@@ -21,6 +13,15 @@ Trace.AutoFlush = true;
 
 // Add services to the container.
 builder.Services.AddControllers();
+builder.Services.AddProblemDetails(opts =>
+    opts.CustomizeProblemDetails = (ctx) => {
+        var exception = ctx.HttpContext.Features.Get<IExceptionHandlerFeature>()?.Error;
+        if(ctx.ProblemDetails.Status == 500)
+        {
+            ctx.ProblemDetails.Detail = "An error occured in our API. Use the trace id when contacting us.";
+        }
+    }
+    );
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -33,7 +34,6 @@ builder.Services.AddDbContext<LocalContext>();
 builder.Services.AddScoped<ICarvedRockRepository, CarvedRockRepository>();
 
 var app = builder.Build();
-app.UseProblemDetails();
 
 using (var scope = app.Services.CreateScope())
 {
@@ -41,6 +41,8 @@ using (var scope = app.Services.CreateScope())
     var context = services.GetRequiredService<LocalContext>();
     context.MigrateAndCreateData();
 }
+
+app.UseExceptionHandler();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
